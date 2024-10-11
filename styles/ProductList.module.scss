@@ -1,0 +1,42 @@
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -1rem; // Negative margin to counteract item padding
+}
+
+.productItem {
+  flex: 0 0 calc(25% - 2rem); // 25% width with 2rem total margin
+  margin: 1rem;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@media (max-width: 1200px) {
+  .productItem {
+    flex: 0 0 calc(33.333% - 2rem); // 3 items per row
+  }
+}
+
+@media (max-width: 900px) {
+  .productItem {
+    flex: 0 0 calc(50% - 2rem); // 2 items per row
+  }
+}
+
+@media (max-width: 600px) {
+  .productItem {
+    flex: 0 0 calc(100% - 2rem); // 1 item per row
+  }
+}
+
+.noProducts {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
