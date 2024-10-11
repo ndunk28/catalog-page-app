@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Layout from '../components/Layout';
 import ProductList from '../components/ProductList';
-import { fetchProducts } from '../store/productsSlice';
+import { fetchProducts } from '../store/ProductsSlice';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
